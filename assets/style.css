@@ -1,0 +1,6 @@
+.poop {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 15px 0px 15px;
+    font-size: 25px;
+}
