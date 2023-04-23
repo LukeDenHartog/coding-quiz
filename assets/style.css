@@ -1,6 +1,18 @@
-.poop {
+* {
+    box-sizing: border-box;
+}
+
+.header-flex-margin {
     display: flex;
     justify-content: space-between;
     margin: 0px 15px 0px 15px;
     font-size: 25px;
 }
+
+.quiz-flexbox-attritbutes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
