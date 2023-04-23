@@ -70,12 +70,48 @@ backButton.addEventListener("click", function() {
 
 function hideMainBox() {
     mainBox.className = "hide";
+  };
+
+
+
+
+
+
+
+  // questions
+
+
+  function Questions(text, choices, answer) {
+    this.text = text;
+    this.choices = choices;
+    this.answer = answer;
   }
 
+Questions.prototype.correctAnswer = function(choice) {
+    return choice === this.answer;
+}
 
+function Quiz (questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.questionIndex = 0;
+}
 
+Quiz.prototype.getQuestionIndex = function() {
+    return this.question[this.questionIndex];
+}
 
+Quiz.prototype.isEnded = function() {
+    return this.questions.length === this.questionIndex;
+}
 
+Quiz.prototype.guess = function(answer) {
+    this.questionIndex++;
+
+    if(this.getQuestionIndex().correctAnswer(answer)) {
+        this.score++;
+    }
+}
 
 
 
