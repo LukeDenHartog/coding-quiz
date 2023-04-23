@@ -3,10 +3,12 @@ const countdown = document.getElementById('countdown');
 quizzzBox = document.querySelector('.quiz-box');
 mainBox = document.getElementById("main-box");
 yourFinalScore = document.getElementById("your-final-score");
+displayScore = document.querySelector('.display-score');
 let timer;
 let timeLeft = 60;
-currentScore = "";
-finalScoreHeader = "<h1>All Done!</h1>";
+let score = 0;
+let finalScore = `<p>Your final score is ${score}<p>`;
+
 
 
 
@@ -19,16 +21,16 @@ startButton.addEventListener("click", function() {
     
     timer = setInterval(() => {
     timeLeft--;
-    countdown.textContent = timeLeft;
+    countdown.textContent = "" + timeLeft;
 
         if (timeLeft <= 0) {
-            yourFinalScore.className = 'show';
+            yourFinalScore.className = 'quiz-flexbox-attritbutes';
             clearInterval(timer);
             countdown.textContent = ' Time is up!';
-            mainBox.innerHTML = finalScoreHeader + "Your final score is" + currentScore;
+            displayScore.innerHTML = finalScore;
             
         }
- }, 1000);
+ }, 100);
 });
 
 function hideMainBox() {
