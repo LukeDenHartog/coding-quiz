@@ -9,7 +9,7 @@ highscoresList = document.getElementById("highscores");
 
 
 let timer;
-let timeLeft = 60;
+let timeLeft = " " + 60;
 let score = 0;
 let finalScore = `<p>Your final score is ${score}<p>`;
 
@@ -54,6 +54,16 @@ startButton.addEventListener("click", function() {
         }
  }, 100);
 });
+
+
+// Reset the time limit to 60 seconds
+backButton.addEventListener("click", function() {
+    clearInterval(timer);
+    timeLeft = 60; 
+    countdown.textContent = "" + timeLeft;
+  });
+
+
 
 function hideMainBox() {
     mainBox.className = "hide";
