@@ -32,3 +32,14 @@
     margin-left: 15px;
 }
 
+.answer-box {
+    background-color: #2a0095;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 225px;
+    height: 50px;
+    color: white;
+  }
+  

@@ -6,7 +6,7 @@ yourFinalScore = document.getElementById("your-final-score");
 displayScore = document.querySelector('.display-score');
 header = document.querySelector('header');
 highscoresList = document.getElementById("highscores");
-
+quizSelector = document.getElementById("quiz-question-card");
 
 let timer;
 let timeLeft = " " + 60;
@@ -36,8 +36,10 @@ function displayHighscores() {
         highscoresList.className = 'show';
 
 }
-
-
+function displayQuiz() {
+    quizSelector.className = 'quiz-flexbox-attritbutes';
+}
+startButton.addEventListener("click", displayQuiz);
 startButton.addEventListener("click", hideMainBox);
 startButton.addEventListener("click", function() {
     
@@ -50,6 +52,7 @@ startButton.addEventListener("click", function() {
             clearInterval(timer);
             countdown.textContent = ' Time is up!';
             displayScore.innerHTML = finalScore;
+            quizSelector.className = 'hide';
             
         }
  }, 100);
