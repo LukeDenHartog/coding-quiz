@@ -19,15 +19,12 @@
 .hide {
     display: none;
 }
-
+.show {
+    display: block;
+}
 #submit-score {
     background-color: #820082;
     color: #ffffff;
     margin-left: 15px;
 }
 
-
-
-#your-final-score {
-
-}

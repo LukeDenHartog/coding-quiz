@@ -5,6 +5,8 @@ mainBox = document.getElementById("main-box");
 yourFinalScore = document.getElementById("your-final-score");
 displayScore = document.querySelector('.display-score');
 header = document.querySelector('header');
+highscoresList = document.getElementById("highscores");
+
 
 let timer;
 let timeLeft = 60;
@@ -19,6 +21,8 @@ submitScoreButton.addEventListener("click", displayHighscores);
 function displayHighscores() {
         yourFinalScore.className = 'hide';
         header.className = 'hide';
+        highscoresList.className = 'show';
+
 }
 
 
