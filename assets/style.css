@@ -22,6 +22,10 @@
 .show {
     display: block;
 }
+.flex {
+    display: flex;
+}
+
 #submit-score {
     background-color: #820082;
     color: #ffffff;

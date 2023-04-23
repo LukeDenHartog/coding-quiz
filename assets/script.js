@@ -15,6 +15,18 @@ let finalScore = `<p>Your final score is ${score}<p>`;
 
 
 
+backButton = document.getElementById("back-button");
+backButton.addEventListener("click", startOver);
+
+function startOver () {
+        highscoresList.className = 'hide';
+        header.className = 'header-flex-margin';
+        mainBox.className = "quiz-flexbox-attritbutes";
+
+      
+
+}
+
 submitScoreButton= document.getElementById("submit-score");
 submitScoreButton.addEventListener("click", displayHighscores);
 
@@ -44,7 +56,7 @@ startButton.addEventListener("click", function() {
 });
 
 function hideMainBox() {
-    mainBox.style.display = "none";
+    mainBox.className = "hide";
   }
 
 
