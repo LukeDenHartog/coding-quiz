@@ -80,39 +80,71 @@ function hideMainBox() {
 
   // questions
 
-
-  function Questions(text, choices, answer) {
-    this.text = text;
-    this.choices = choices;
-    this.answer = answer;
-  }
-
-Questions.prototype.correctAnswer = function(choice) {
-    return choice === this.answer;
-}
-
-function Quiz (questions) {
-    this.score = 0;
-    this.questions = questions;
-    this.questionIndex = 0;
-}
-
-Quiz.prototype.getQuestionIndex = function() {
-    return this.question[this.questionIndex];
-}
-
-Quiz.prototype.isEnded = function() {
-    return this.questions.length === this.questionIndex;
-}
-
-Quiz.prototype.guess = function(answer) {
-    this.questionIndex++;
-
-    if(this.getQuestionIndex().correctAnswer(answer)) {
-        this.score++;
+const questions = [
+    {
+      question: "What does JSON mean?",
+      choices: ["Cascading Style Sheets", "Java", "JavaScript Object Notation", "Jabba the hutt"],
+      answer: "JavaScript Object Notation"
+    },
+    {
+      question: "In JS what is this: ${...}",
+      choices: ["It's a variable", "A Template Literal", "A string", "A function"],
+      answer: "A Template Literal"
+    },
+    {
+      question: "What does clearInterval() do?",
+      choices: ["Cancels a timer", "Clears the console", "Clears Terminal", "Nothing"],
+      answer: "Cancels a timer"
     }
-}
+  ];
+  
+  let currentQuestionIndex = 0;
+  
 
+  function displayQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+    const questionEl = document.getElementById("question");
+    const choice1El = document.getElementById("choice1");
+    const choice2El = document.getElementById("choice2");
+    const choice3El = document.getElementById("choice3");
+    const choice4El = document.getElementById("choice4");
+  
+    questionEl.textContent = currentQuestion.question;
+    choice1El.textContent = currentQuestion.choices[0];
+    choice2El.textContent = currentQuestion.choices[1];
+    choice3El.textContent = currentQuestion.choices[2];
+    choice4El.textContent = currentQuestion.choices[3];
+  }
+  
+  function handleAnswer(userAnswer) {
+    const currentQuestion = questions[currentQuestionIndex];
+  
+    if (userAnswer === currentQuestion.answer) {
+      console.log("Correct!");
+    } else {
+      console.log("Incorrect!");
+    }
+  
+    currentQuestionIndex++;
+  
+    if (currentQuestionIndex === questions.length) {
+      console.log("Quiz complete!");
+    } else {
+      displayQuestion();
+    }
+  }
+  
 
-
-
+  const choice1Btn = document.getElementById("b1");
+  const choice2Btn = document.getElementById("b2");
+  const choice3Btn = document.getElementById("b3");
+  const choice4Btn = document.getElementById("b4");
+  
+  choice1Btn.addEventListener("click", () => handleAnswer(questions[currentQuestionIndex].choices[0]));
+  choice2Btn.addEventListener("click", () => handleAnswer(questions[currentQuestionIndex].choices[1]));
+  choice3Btn.addEventListener("click", () => handleAnswer(questions[currentQuestionIndex].choices[2]));
+  choice4Btn.addEventListener("click", () => handleAnswer(questions[currentQuestionIndex].choices[3]));
+  
+ 
+  displayQuestion();
+  
