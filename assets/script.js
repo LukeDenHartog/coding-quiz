@@ -52,7 +52,7 @@ startButton.addEventListener("click", function() {
     timeLeft--;
     countdown.textContent = "" + timeLeft;
 
-        if (timeLeft <= 0) {
+        if (timeLeft <= 0 && highscoresList.className === 'hide') {
             yourFinalScore.className = 'quiz-flexbox-attritbutes';
             quizFlexbox.className ="hide";
             clearInterval(timer);
@@ -162,4 +162,17 @@ const questions = [
   
   // Display the first question
   displayQuestion();
+
+ 
+
+
+  function saveInput() {
+ 
+    const inputField = document.getElementById("input-field");
   
+   
+    const inputValue = inputField.value;
+  
+   
+    localStorage.setItem("inputValue", inputValue);
+  }
