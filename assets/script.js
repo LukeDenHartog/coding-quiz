@@ -6,14 +6,13 @@ yourFinalScore = document.getElementById("your-final-score");
 displayScore = document.querySelector('.display-score');
 header = document.querySelector('header');
 highscoresList = document.getElementById("highscores");
-quizSelector = document.getElementById("quiz-question-card");
+
 quizHide = document.querySelector(".flex");
 
 
 let timer;
 let timeLeft = " " + 60;
 let score = 0;
-let finalScore = `<p>Your final score is ${score}<p>`;
 
 
 quizFlexbox = document.getElementById('quiz-flexbox');
@@ -38,24 +37,28 @@ function displayHighscores() {
         highscoresList.className = 'show';
 
 }
+
+
+
 function displayQuiz() {
     quizSelector.className = 'quiz-flexbox-attritbutes';
 }
+
 startButton.addEventListener("click", displayQuiz);
 startButton.addEventListener("click", hideMainBox);
 startButton.addEventListener("click", function() {
-    
+  quizFlexbox.className ="flex";
     timer = setInterval(() => {
     timeLeft--;
     countdown.textContent = "" + timeLeft;
 
         if (timeLeft <= 0) {
             yourFinalScore.className = 'quiz-flexbox-attritbutes';
+            quizFlexbox.className ="hide";
             clearInterval(timer);
             countdown.textContent = ' Time is up!';
-            displayScore.innerHTML = finalScore;
             quizSelector.className = 'hide';
-            
+            displayScore.textContent = `Your Final Score is: ${score}`;
         }
  }, 100);
 });
@@ -123,7 +126,8 @@ const questions = [
   
     if (userAnswer === currentQuestion.answer) {
      
-      
+      score++;
+      displayScore.textContent = `Your Final Score is: ${score}`;
       console.log("Correct!");
     } else {
      
