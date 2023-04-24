@@ -79,7 +79,6 @@ function hideMainBox() {
 
 
   // questions
-
 const questions = [
     {
       question: "What does JSON mean?",
@@ -94,13 +93,13 @@ const questions = [
     {
       question: "What does clearInterval() do?",
       choices: ["Cancels a timer", "Clears the console", "Clears Terminal", "Nothing"],
-      answer: "Cancels a timer"
+      answer: "Blue"
     }
   ];
   
   let currentQuestionIndex = 0;
   
-
+  // Function displays the current question and its choices
   function displayQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
     const questionEl = document.getElementById("question");
@@ -116,25 +115,31 @@ const questions = [
     choice4El.textContent = currentQuestion.choices[3];
   }
   
+  // Function handles a user's answer to the current question
   function handleAnswer(userAnswer) {
     const currentQuestion = questions[currentQuestionIndex];
   
     if (userAnswer === currentQuestion.answer) {
+   
       console.log("Correct!");
     } else {
+     
       console.log("Incorrect!");
     }
   
+    // Move to the next question
     currentQuestionIndex++;
   
+    // If there are no more questions, end the quiz
     if (currentQuestionIndex === questions.length) {
       console.log("Quiz complete!");
     } else {
+      // Display the next question
       displayQuestion();
     }
   }
   
-
+  // Add event listeners to the answer buttons
   const choice1Btn = document.getElementById("b1");
   const choice2Btn = document.getElementById("b2");
   const choice3Btn = document.getElementById("b3");
@@ -145,6 +150,6 @@ const questions = [
   choice3Btn.addEventListener("click", () => handleAnswer(questions[currentQuestionIndex].choices[2]));
   choice4Btn.addEventListener("click", () => handleAnswer(questions[currentQuestionIndex].choices[3]));
   
- 
+  // Display the first question
   displayQuestion();
   
