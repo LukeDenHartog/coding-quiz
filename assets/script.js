@@ -7,6 +7,8 @@ displayScore = document.querySelector('.display-score');
 header = document.querySelector('header');
 highscoresList = document.getElementById("highscores");
 quizSelector = document.getElementById("quiz-question-card");
+quizHide = document.querySelector(".flex");
+
 
 let timer;
 let timeLeft = " " + 60;
@@ -14,6 +16,8 @@ let score = 0;
 let finalScore = `<p>Your final score is ${score}<p>`;
 
 
+quizFlexbox = document.getElementById('quiz-flexbox');
+quizFlexbox.className ="hide";
 
 backButton = document.getElementById("back-button");
 backButton.addEventListener("click", startOver);
@@ -22,8 +26,6 @@ function startOver () {
         highscoresList.className = 'hide';
         header.className = 'header-flex-margin';
         mainBox.className = "quiz-flexbox-attritbutes";
-
-      
 
 }
 
@@ -93,7 +95,7 @@ const questions = [
     {
       question: "What does clearInterval() do?",
       choices: ["Cancels a timer", "Clears the console", "Clears Terminal", "Nothing"],
-      answer: "Blue"
+      answer: "Cancels a timer"
     }
   ];
   
@@ -120,7 +122,8 @@ const questions = [
     const currentQuestion = questions[currentQuestionIndex];
   
     if (userAnswer === currentQuestion.answer) {
-   
+     
+      
       console.log("Correct!");
     } else {
      
@@ -132,6 +135,9 @@ const questions = [
   
     // If there are no more questions, end the quiz
     if (currentQuestionIndex === questions.length) {
+      quizHide.className = "hide";
+      yourFinalScore.className = 'quiz-flexbox-attritbutes';
+      
       console.log("Quiz complete!");
     } else {
       // Display the next question
