@@ -29,9 +29,9 @@ function startOver () {
 }
 
 submitScoreButton= document.getElementById("submit-score");
-submitScoreButton.addEventListener("click", displayHighscores);
+submitScoreButton.addEventListener("click", displayHighscorez);
 
-function displayHighscores() {
+function displayHighscorez() {
         yourFinalScore.className = 'hide';
         header.className = 'hide';
         highscoresList.className = 'show';
@@ -163,16 +163,38 @@ const questions = [
   // Display the first question
   displayQuestion();
 
- 
+ highscoreArray = [];
 
 
   function saveInput() {
  
     const inputField = document.getElementById("input-field");
-  
-   
     const inputValue = inputField.value;
-  
-   
+    
+    localStorage.setItem("scoreValue", score);
     localStorage.setItem("inputValue", inputValue);
+  } 
+
+  function loadInput() {
+    let storedScore = localStorage.getItem("scoreValue");
+    let storedInput = localStorage.getItem("inputValue");
+    let playerData = {
+      name: storedInput,
+      score: storedScore
+    };console.log(playerData);
+    let storedDataObj = JSON.parse(JSON.stringify(playerData));
+    highscoreArray.push(storedDataObj);
+    return storedDataObj;
+    
+    console.log(storedDataObj);
   }
+
+
+
+
+  
+
+
+
+
+

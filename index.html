@@ -68,7 +68,7 @@
 
 
             <p>Enter initials: <input type="text" id="input-field">
-                <button onclick="saveInput()" id="submit-score">Save Input</button></p>
+                <button onclick="saveInput(), loadInput()" id="submit-score">Save Input</button></p>
     </div>
 
 </div>
@@ -81,9 +81,16 @@
     <div id="highscores" class="hide">
        <div class="quiz-flexbox-attritbutes">
             <h1>High scores</h1>
-            <span id="highscore-list"></span>
-            <button onclick="location.reload()" id="back-button">Go back</button>
-            <button id="clear-button">Clear high scores</button>
+                <span id="highscore-list">
+
+                <p id="highscore-paragraph-ele"></p>
+
+
+                </span>
+                <button 
+                onclick="location.reload()" id="back-button">Go back
+                </button>
+                <button id="clear-button">Clear high scores</button>
         </div>
     </div>
 
