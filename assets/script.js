@@ -60,7 +60,7 @@ startButton.addEventListener("click", function() {
             quizSelector.className = 'hide';
             displayScore.textContent = `Your Final Score is: ${score}`;
         }
- }, 100);
+ }, 1000);
 });
 
 
@@ -130,7 +130,7 @@ const questions = [
       displayScore.textContent = `Your Final Score is: ${score}`;
       console.log("Correct!");
     } else {
-     
+      timeLeft -= 10;
       console.log("Incorrect!");
     }
   
@@ -183,13 +183,11 @@ const questions = [
       score: storedScore
     };console.log(playerData);
     let storedDataObj = JSON.parse(JSON.stringify(playerData));
-    highscoreArray.push(storedDataObj);
-    return storedDataObj;
+    highscoreArray.push(playerData);
     
-    console.log(storedDataObj);
+    
+    console.log(highscoreArray);
   }
-
-
 
 
   

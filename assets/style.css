@@ -72,3 +72,7 @@
     curser: pointer;
     background-color: pink;
 }
+
+#back-button {
+    margin-bottom: 50px;
+}
