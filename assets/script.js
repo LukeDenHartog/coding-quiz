@@ -163,31 +163,50 @@ const questions = [
   // Display the first question
   displayQuestion();
 
- highscoreArray = [];
+function saveInput() {
+  const inputField = document.getElementById("input-field");
+  const inputValue = inputField.value;
 
+  // Get the current high scores from local storage
+  let highscorez = JSON.parse(localStorage.getItem("highscorez"));
 
-  function saveInput() {
- 
-    const inputField = document.getElementById("input-field");
-    const inputValue = inputField.value;
-    
-    localStorage.setItem("scoreValue", score);
-    localStorage.setItem("inputValue", inputValue);
-  } 
-
-  function loadInput() {
-    let storedScore = localStorage.getItem("scoreValue");
-    let storedInput = localStorage.getItem("inputValue");
-    let playerData = {
-      name: storedInput,
-      score: storedScore
-    };console.log(playerData);
-    let storedDataObj = JSON.parse(JSON.stringify(playerData));
-    highscoreArray.push(playerData);
-    
-    
-    console.log(highscoreArray);
+  // If there are no existing high scores, create an empty array
+  if (!highscorez) {
+    highscorez = [];
   }
+
+  // Add the new high score to the array
+  highscorez.push({name: inputValue, score: score});
+
+  // Save the updated high scores back to local storage
+  localStorage.setItem("highscorez", JSON.stringify(highscorez));
+}
+
+function loadInput() {
+  // Get the high scores from local storage
+  let highscorez = JSON.parse(localStorage.getItem("highscorez"));
+
+  // If there are no high scores, create an empty array
+  if (!highscorez) {
+    highscorez = [];
+  }
+// Assuming the highscores array exists and contains objects with 'name' and 'score' properties
+leaderBoard = document.getElementById("highscore-paragraph-ele");
+
+// Loop through the highscores array and create a new list item for each object
+highscorez.forEach(function(item) {
+  const li = document.createElement('li');
+  li.textContent = `${item.name}: ${item.score}`;
+  leaderBoard.appendChild(li);
+});
+
+  // Log the high scores to the console
+  console.log(highscorez);
+}
+
+
+
+
 
 
   
