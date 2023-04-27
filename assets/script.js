@@ -6,9 +6,9 @@ yourFinalScore = document.getElementById("your-final-score");
 displayScore = document.querySelector('.display-score');
 header = document.querySelector('header');
 highscoresList = document.getElementById("highscores");
-
+viewHS = document.getElementById("view-hs");
 quizHide = document.querySelector(".flex");
-
+clearButton = document.getElementById("clear-button");
 
 let timer;
 let timeLeft = " " + 60;
@@ -37,7 +37,13 @@ function displayHighscorez() {
         highscoresList.className = 'show';
 
 }
+function viewHighScores() {
+        yourFinalScore.className = 'hide';
+        header.className = 'hide';
+        highscoresList.className = 'show';
+        mainBox.className = 'hide';
 
+}
 
 
 function displayQuiz() {
@@ -85,15 +91,30 @@ function hideMainBox() {
 
   // questions
 const questions = [
+  {
+    question: "What is the average air speed velocity of a Unladen Swallow?",
+    choices: ["69mph", "What's a Unladen Swallow?", "African or European?", "333mph"],
+    answer: "African or European?"
+  },
     {
       question: "What does JSON mean?",
       choices: ["Cascading Style Sheets", "Java", "JavaScript Object Notation", "Jabba the hutt"],
       answer: "JavaScript Object Notation"
     },
     {
-      question: "In JS what is this: ${...}",
-      choices: ["It's a variable", "A Template Literal", "A string", "A function"],
-      answer: "A Template Literal"
+      question: "What's Catherine's favorite color",
+      choices: ["Red", "Orange", "Yellow", "Blue"],
+      answer: "Red"
+    },
+    {
+      question: "What does clearInterval() do?",
+      choices: ["Cancels a timer", "Clears the console", "Clears Terminal", "Nothing"],
+      answer: "Cancels a timer"
+    },
+    {
+      question: "What does clearInterval() do?",
+      choices: ["Cancels a timer", "Clears the console", "Clears Terminal", "Nothing"],
+      answer: "Cancels a timer"
     },
     {
       question: "What does clearInterval() do?",
@@ -205,13 +226,13 @@ highscorez.forEach(function(item) {
 }
 
 
+viewHS.addEventListener("click", viewHighScores);
+viewHS.addEventListener("click", loadInput);
 
 
 
-
+clearButton.addEventListener("click", function() {
+  localStorage.clear();
   
-
-
-
-
-
+});
+  
