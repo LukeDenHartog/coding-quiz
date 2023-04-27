@@ -76,3 +76,20 @@
 #back-button {
     margin-bottom: 50px;
 }
+
+#correct-answer-display,
+#wrong-answer-display {
+    border-top: 3px solid grey;
+    
+}
+.dynamic-answering {
+ display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+
+}
+#correct-answer-display p,
+#wrong-answer-display p {
+  font-size: 30px;
+}

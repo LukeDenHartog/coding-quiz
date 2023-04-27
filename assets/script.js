@@ -140,19 +140,34 @@ const questions = [
     choice3El.textContent = currentQuestion.choices[2];
     choice4El.textContent = currentQuestion.choices[3];
   }
-  
+  correctAnswer = document.getElementById("correct-answer-display");
+incorrectAnswer = document.getElementById("wrong-answer-display");
   // Function handles a user's answer to the current question
   function handleAnswer(userAnswer) {
     const currentQuestion = questions[currentQuestionIndex];
   
-    if (userAnswer === currentQuestion.answer) {
+   if (userAnswer === currentQuestion.answer) {
      
       score++;
       displayScore.textContent = `Your Final Score is: ${score}`;
+      // Add the "show" class to the element
+          correctAnswer.className = 'show';
+
+          // Set a timer to remove the "show" class after 5 seconds
+          setTimeout(function() {
+            correctAnswer.className = 'hide';
+          }, 2000);
       console.log("Correct!");
     } else {
       timeLeft -= 10;
+      incorrectAnswer.className = 'show';
+
+      // Set a timer to  remove the "show" class after 5 seconds
+      setTimeout(function() {
+        incorrectAnswer.className = 'hide';
+      }, 2000);
       console.log("Incorrect!");
+
     }
   
     // Move to the next question
@@ -166,8 +181,10 @@ const questions = [
       console.log("Quiz complete!");
     } else {
       // Display the next question
-      displayQuestion();
-    }
+      setTimeout(function() {
+        displayQuestion();
+      }, 2000);
+     }
   }
   
   // Add event listeners to the answer buttons
@@ -233,6 +250,7 @@ viewHS.addEventListener("click", loadInput);
 
 clearButton.addEventListener("click", function() {
   localStorage.clear();
-  
 });
   
+
+
