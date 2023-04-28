@@ -92,9 +92,7 @@ function hideMainBox() {
   // questions
 const questions = [
   {
-    question: "What is the average air speed velocity of a Unladen Swallow?",
-    choices: ["69mph", "What's a Unladen Swallow?", "African or European?", "333mph"],
-    answer: "African or European?"
+   
   },
     {
       question: "What does JSON mean?",
@@ -102,9 +100,9 @@ const questions = [
       answer: "JavaScript Object Notation"
     },
     {
-      question: "What's Catherine's favorite color",
-      choices: ["Red", "Orange", "Yellow", "Blue"],
-      answer: "Red"
+      question: "What does localStorage allow you to do?",
+      choices: ["Nothing", "Store data", "See the future", "Apply color"],
+      answer: "Store data"
     },
     {
       question: "What does clearInterval() do?",
@@ -112,14 +110,14 @@ const questions = [
       answer: "Cancels a timer"
     },
     {
-      question: "What does clearInterval() do?",
-      choices: ["Cancels a timer", "Clears the console", "Clears Terminal", "Nothing"],
-      answer: "Cancels a timer"
+      question: "What does CDN stand for?",
+      choices: ["Cancels Diliver Net", "Cats Dogs Narwhals ", "Content delivery network", "Nothing"],
+      answer: "Content delivery network"
     },
     {
-      question: "What does clearInterval() do?",
-      choices: ["Cancels a timer", "Clears the console", "Clears Terminal", "Nothing"],
-      answer: "Cancels a timer"
+      question: "What is the average air speed velocity of a Unladen Swallow?",
+      choices: ["69mph", "What's a Unladen Swallow?", "African or European?", "333mph"],
+      answer: "African or European?"
     }
   ];
   
@@ -156,7 +154,7 @@ incorrectAnswer = document.getElementById("wrong-answer-display");
           // Set a timer to remove the "show" class after 5 seconds
           setTimeout(function() {
             correctAnswer.className = 'hide';
-          }, 2000);
+          }, 800);
       console.log("Correct!");
     } else {
       timeLeft -= 10;
@@ -165,7 +163,7 @@ incorrectAnswer = document.getElementById("wrong-answer-display");
       // Set a timer to  remove the "show" class after 5 seconds
       setTimeout(function() {
         incorrectAnswer.className = 'hide';
-      }, 2000);
+      }, 800);
       console.log("Incorrect!");
 
     }
