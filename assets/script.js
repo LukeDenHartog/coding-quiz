@@ -91,9 +91,6 @@ function hideMainBox() {
 
   // questions
 const questions = [
-  {
-   
-  },
     {
       question: "What does JSON mean?",
       choices: ["Cascading Style Sheets", "Java", "JavaScript Object Notation", "Jabba the hutt"],
