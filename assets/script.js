@@ -85,10 +85,6 @@ function hideMainBox() {
 
 
 
-
-
-
-
   // questions
 const questions = [
     {
@@ -151,7 +147,7 @@ incorrectAnswer = document.getElementById("wrong-answer-display");
           // Set a timer to remove the "show" class after 5 seconds
           setTimeout(function() {
             correctAnswer.className = 'hide';
-          }, 800);
+          }, 2000);
       console.log("Correct!");
     } else {
       timeLeft -= 10;
@@ -160,7 +156,7 @@ incorrectAnswer = document.getElementById("wrong-answer-display");
       // Set a timer to  remove the "show" class after 5 seconds
       setTimeout(function() {
         incorrectAnswer.className = 'hide';
-      }, 800);
+      }, 2000);
       console.log("Incorrect!");
 
     }
@@ -170,10 +166,13 @@ incorrectAnswer = document.getElementById("wrong-answer-display");
   
     // If there are no more questions, end the quiz
     if (currentQuestionIndex === questions.length) {
-      quizHide.className = "hide";
-      yourFinalScore.className = 'quiz-flexbox-attritbutes';
-      
-      console.log("Quiz complete!");
+      setTimeout(function(){
+        quizHide.className = "hide";
+        yourFinalScore.className = 'quiz-flexbox-attritbutes';
+        
+        console.log("Quiz complete!");
+      }, 2000);
+
     } else {
       // Display the next question
       setTimeout(function() {
