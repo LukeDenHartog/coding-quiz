@@ -42,15 +42,17 @@ function viewHighScores() {
         header.className = 'hide';
         highscoresList.className = 'show';
         mainBox.className = 'hide';
-
+        highscorez.forEach(function(item) {
+          const li = document.createElement('li');
+          li.textContent = `${item.name}: ${item.score}`;
+          leaderBoard.appendChild(li);
+        }); 
 }
 
 
-function displayQuiz() {
-    quizSelector.className = 'quiz-flexbox-attritbutes';
-}
 
-startButton.addEventListener("click", displayQuiz);
+
+
 startButton.addEventListener("click", hideMainBox);
 startButton.addEventListener("click", function() {
   quizFlexbox.className ="flex";
@@ -63,7 +65,7 @@ startButton.addEventListener("click", function() {
             quizFlexbox.className ="hide";
             clearInterval(timer);
             countdown.textContent = ' Time is up!';
-            quizSelector.className = 'hide';
+           
             displayScore.textContent = `Your Final Score is: ${score}`;
         }
  }, 1000);
@@ -202,6 +204,7 @@ function saveInput() {
   // Get the current high scores from local storage
   let highscorez = JSON.parse(localStorage.getItem("highscorez"));
 
+ 
   // If there are no existing high scores, create an empty array
   if (!highscorez) {
     highscorez = [];
@@ -209,36 +212,26 @@ function saveInput() {
 
   // Add the new high score to the array
   highscorez.push({name: inputValue, score: score});
-
+  highscorez.sort((a, b) => b.score - a.score);
   // Save the updated high scores back to local storage
   localStorage.setItem("highscorez", JSON.stringify(highscorez));
+  highscorez.forEach(function(item) {
+    const li = document.createElement('li');
+    li.textContent = `${item.name}: ${item.score}`;
+    leaderBoard.appendChild(li);
+  });
 }
 
-function loadInput() {
-  // Get the high scores from local storage
-  let highscorez = JSON.parse(localStorage.getItem("highscorez"));
 
-  // If there are no high scores, create an empty array
-  if (!highscorez) {
-    highscorez = [];
-  }
-// Assuming the highscores array exists and contains objects with 'name' and 'score' properties
+let highscorez = JSON.parse(localStorage.getItem("highscorez"));
 leaderBoard = document.getElementById("highscore-paragraph-ele");
 
-// Loop through the highscores array and create a new list item for each object
-highscorez.forEach(function(item) {
-  const li = document.createElement('li');
-  li.textContent = `${item.name}: ${item.score}`;
-  leaderBoard.appendChild(li);
-});
 
-  // Log the high scores to the console
-  console.log(highscorez);
-}
+
 
 
 viewHS.addEventListener("click", viewHighScores);
-viewHS.addEventListener("click", loadInput);
+
 
 
 
@@ -246,5 +239,4 @@ clearButton.addEventListener("click", function() {
   localStorage.clear();
 });
   
-
 

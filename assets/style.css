@@ -46,7 +46,9 @@
     height: 50px;
     color: white;
   }
-  
+li {
+    font-size: 24px;
+  }
 
 .flex #question {
     font-size: 50px;
