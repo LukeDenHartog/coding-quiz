@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+body {
+    background-color: lightgrey;
+}
 .header-flex-margin {
     display: flex;
     justify-content: space-between;
@@ -28,10 +30,10 @@
 .flex {
     display: flex;
     margin: 0 auto;
-    border: 10px solid black;
+    border: 10px solid blue;
     justify-content: center;
+    background-color: white;
 }
-
 #submit-score {
     background-color: #820082;
     color: #ffffff;
@@ -120,7 +122,8 @@ li {
         width: 125px;
         height: 50px;
         font-size: 20px;
-        margin-top: 75px;
+        margin-top: 50px;
+        margin-bottom: 25px;
     }
     #timer-html {
         margin: 5px 0px 10px 0px;
