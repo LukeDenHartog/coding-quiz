@@ -222,7 +222,6 @@ function saveInput() {
   });
 }
 
-
 let highscorez = JSON.parse(localStorage.getItem("highscorez"));
 leaderBoard = document.getElementById("highscore-paragraph-ele");
 
@@ -231,12 +230,6 @@ if (quizFlexbox.className !== 'hide') {
   viewHS.addEventListener("click", viewHighScores);
 }
 
-
-
-
-
 clearButton.addEventListener("click", function() {
   localStorage.clear();
 });
-  
-

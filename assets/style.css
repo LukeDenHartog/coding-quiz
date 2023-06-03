@@ -25,7 +25,7 @@
 .flex {
     display: flex;
     margin: 0 auto;
-    border: 1px solid black;
+    border: 10px solid black;
     justify-content: center;
 }
 
@@ -96,4 +96,14 @@ li {
 #correct-answer-display p,
 #wrong-answer-display p {
   font-size: 30px;
+}
+
+@media screen and (max-width: 480px) {
+    .flex #question {
+        font-size: 35px;
+        padding: 0 5px 0 15px; 
+    }
+    #quiz-flexbox {
+        border: 5px solid black;
+    }
 }
