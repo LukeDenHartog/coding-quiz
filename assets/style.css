@@ -98,6 +98,12 @@ li {
   font-size: 30px;
 }
 
+.header-flex-margin02 {
+    display: flex;
+    justify-content: center;
+    margin: 0px 15px 0px 15px;
+    font-size: 25px;
+}
 @media screen and (max-width: 480px) {
     .flex #question {
         font-size: 35px;
@@ -106,4 +112,7 @@ li {
     #quiz-flexbox {
         border: 5px solid black;
     }
+}
+.hide-display {
+    display: none;
 }
