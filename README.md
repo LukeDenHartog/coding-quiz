@@ -11,12 +11,12 @@ Link to deployed application: https://afrozez.github.io/coding-quiz/
 
 - Download Visual Studio Code: https://code.visualstudio.com/
 - Pull the files frop my GitHub Profile Repository: https://github.com/Afrozez/passwordgenerator-03
-- It is recommended to have to latest version of Google Chrome which can be found here: https://www.google.com/chrome/.
+- It is recommended to have the latest version of Google Chrome which can be found here: https://www.google.com/chrome/.
   
 
 
 ## Usage
- This (https://afrozez.github.io/coding-quiz/) project displays a web based program that cycles through an array of coding questions. It will deduct 10 seconds every incorrect answer and ask for the users initials. Once the initials are placed it will display the previous players/score.This module will also be added to a github to display my experience to future visitors to my github page.
+ This (https://afrozez.github.io/coding-quiz/) project displays a web based program that cycles through a array of coding questions. It will deduct 10 seconds for every incorrect answer and ask for the users initials at the end. Once the user enters their initials it will display the previous players scores. You can also view the highscore list by clicking the "View Highscores" text on the top left. This module will also be added to a github to display my experience to future visitors to my github page.
 
 If any users have any questions about how to start the project they can reach me at lukeadenhartog@gmail.com.
 
