@@ -9,25 +9,30 @@ highscoresList = document.getElementById("highscores");
 viewHS = document.getElementById("view-hs");
 quizHide = document.querySelector(".flex");
 clearButton = document.getElementById("clear-button");
+headerFlexbox = document.getElementById('header-flexbox');
+backButton = document.getElementById("back-button");
+quizFlexbox = document.getElementById('quiz-flexbox');
+correctAnswer = document.getElementById("correct-answer-display");
+incorrectAnswer = document.getElementById("wrong-answer-display");
+submitScoreButton = document.getElementById("submit-score");
+leaderBoard = document.getElementById("highscore-paragraph-ele");
 
 let timer;
 let timeLeft = 60;
 let score = 0;
 
-quizFlexbox = document.getElementById('quiz-flexbox');
+
 quizFlexbox.className = "hide";
 
-backButton = document.getElementById("back-button");
 backButton.addEventListener("click", startOver);
+submitScoreButton.addEventListener("click", displayHighscorez);
+viewHS.addEventListener("click", viewHighScores);
 
 function startOver() {
     highscoresList.className = 'hide';
     header.className = 'header-flex-margin';
     mainBox.className = "quiz-flexbox-attritbutes";
 }
-
-submitScoreButton = document.getElementById("submit-score");
-submitScoreButton.addEventListener("click", displayHighscorez);
 
 function displayHighscorez() {
     yourFinalScore.className = 'hide';
@@ -71,7 +76,7 @@ backButton.addEventListener("click", function () {
     countdown.textContent = "" + timeLeft;
 });
 
-headerFlexbox = document.getElementById('header-flexbox');
+
 
 function hideMainBox() {
     mainBox.className = "hide";
@@ -126,10 +131,6 @@ function displayQuestion() {
     choice3El.textContent = currentQuestion.choices[2];
     choice4El.textContent = currentQuestion.choices[3];
 }
-
-correctAnswer = document.getElementById("correct-answer-display");
-incorrectAnswer = document.getElementById("wrong-answer-display");
-
 // Function handles a user's answer to the current question
 function handleAnswer(userAnswer) {
     const currentQuestion = questions[currentQuestionIndex];
@@ -218,9 +219,6 @@ function saveInput() {
 }
 
 let highscorez = JSON.parse(localStorage.getItem("highscorez"));
-leaderBoard = document.getElementById("highscore-paragraph-ele");
-
-viewHS.addEventListener("click", viewHighScores);
 
 clearButton.addEventListener("click", function () {
     localStorage.clear();
