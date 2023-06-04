@@ -12,8 +12,8 @@
 
 <body>
     <header id ="header-flexbox"class ="header-flex-margin ">   
-        <p id="view-hs">View high scores</p>
-        <p id="timer-html">Time :     <span id="countdown">60</span></p>
+        <button id="view-hs">View high scores</button>
+        <button id="timer-html">Time :     <span id="countdown">60</span></button>
     </header>
 
 <!--  This is the first body element we see  -->
@@ -21,8 +21,8 @@
     <div id="main-box" class ="quiz-flexbox-attritbutes">
      <h1>Coding Quiz Challenge</h1>
     
-    <h2 id="intro-h2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Try to answer the following code-related questions 
-        within the time limit. Keep in mind that incorrect 
+    <h2 id="intro-h2">Try to answer the following code-related questions 
+        within the time limit.</h2> <h2 id="intro-h2">Keep in mind that incorrect 
         answers will penalize your score/time by ten seconds!</h2>
      <button id="start-button">Start Quiz</button>
     
@@ -62,7 +62,7 @@
             <div class="display-score">
                  <p>Your final score is</p>
             </div>
-            <p>Enter initials: <input type="text" id="input-field">
+            <p id="enter-initials-text">Enter initials: <input type="text" id="input-field">
                 <button onclick="saveInput(), loadInput()" id="submit-score">Save Input</button></p>
     </div>
 </div>

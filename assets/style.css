@@ -16,10 +16,9 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 100px;
 }
 #intro-h2 {
-    padding-left: 10px;
+    padding: 0px 80px;
 }
 .hide {
     display: none;
@@ -33,9 +32,10 @@ body {
     justify-content: center;
 }
 #submit-score {
-    background-color: #820082;
-    color: #ffffff;
-    margin-left: 15px;
+    width: fit-content;
+    height: 40px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px;
 }
 
 .answer-box {
@@ -80,7 +80,9 @@ li {
     cursor: pointer;
     background-color: rgb(4, 193, 193);
 }
-
+#start-button:hover {
+    cursor: pointer;
+}
 #back-button {
     margin-bottom: 50px;
 }
@@ -120,6 +122,44 @@ li {
 #incorrect-answer-text {
     color: red;
 }
+#start-button {
+    width: 125px;
+    height: 50px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    box-shadow: 10px 10px 10px teal;
+}
+#view-hs {
+    width: fit-content;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 10px 10px 10px grey;
+}
+#timer-html {
+    width: fit-content;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 10px 10px 10px grey;
+    margin: 5px 0px 15px 0px;
+}
+#input-field {
+    width: fit-content;
+    height: 40px;
+    font-size: 20px;
+    padding-left: 15px;
+    box-shadow: 5px 5px 10px;
+    margin-left: 10px;
+}
+#enter-initials-text {
+    font-size: 25px;
+}
+#your-final-score {
+    margin: 7%;
+}
+.display-score {
+    margin: 50px;
+}
 @media screen and (max-width: 480px) {
     .flex #question {
         font-size: 35px;
@@ -127,13 +167,6 @@ li {
     }
     #quiz-flexbox {
         border: 2px solid teal;
-    }
-    #start-button {
-        width: 125px;
-        height: 50px;
-        font-size: 20px;
-        margin-top: 50px;
-        margin-bottom: 25px;
     }
     #timer-html {
         margin: 5px 0px 10px 0px;
