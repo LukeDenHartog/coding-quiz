@@ -1,5 +1,6 @@
-# coding-quiz
-
+<div align="center">
+  <h1>Coding Quiz<h1>
+</div>
 <p align="center">
   <a href="https://skillicons.dev">
     <img src="https://skillicons.dev/icons?i=js,html,css" />
@@ -9,8 +10,10 @@
 <div align="center">
   <img src="./assets/codingQuiz.jpg" alt="Site screenshot">
 </div>
+<div align="center">
+  <p>Link to deployed application: <a href="https://afrozez.github.io/coding-quiz/">https://afrozez.github.io/coding-quiz/<a></p>
+</div>
 
-Link to deployed application: https://afrozez.github.io/coding-quiz/
 
 
 ## To successfully make a functional quiz I had to research how to make my page dynamic. I also had to look up how to store and retrieve data from the local storage. While creating this I got alot of practice writing code from scratch to make a functional quiz.
