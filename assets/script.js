@@ -104,7 +104,7 @@ const questions = [
     },
     {
         question: "What does CDN stand for?",
-        choices: ["Cancels Diliver Net", "Cats Dogs Narwhals ", "Content delivery network", "Nothing"],
+        choices: ["Cancels Delivery Net", "Cats, Dogs & Narwhals ", "Content delivery network", "Nothing"],
         answer: "Content delivery network"
     },
     {

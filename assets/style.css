@@ -114,6 +114,12 @@ li {
 #b4 {
     margin-bottom: 50px;
 }
+#correct-answer-text {
+    color: green;
+}
+#incorrect-answer-text {
+    color: red;
+}
 @media screen and (max-width: 480px) {
     .flex #question {
         font-size: 35px;
