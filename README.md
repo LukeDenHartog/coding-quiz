@@ -1,5 +1,5 @@
 # coding-quiz
-
+[![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
 ![Site screnshot](./assets/codingQuiz.jpg)
 
 Link to deployed application: https://afrozez.github.io/coding-quiz/
