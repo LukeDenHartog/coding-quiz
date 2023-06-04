@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Coding Quiz<h1>
+  <h1 >Coding Quiz<h1>
 </div>
 <p align="center">
   <a href="https://skillicons.dev">
@@ -11,7 +11,7 @@
   <img src="./assets/codingQuiz.jpg" alt="Site screenshot">
 </div>
 <div align="center">
-  <p>Link to deployed application: <a href="https://afrozez.github.io/coding-quiz/">https://afrozez.github.io/coding-quiz/<a></p>
+  <p style="font-size: 25px">Link to deployed application: <a href="https://afrozez.github.io/coding-quiz/">https://afrozez.github.io/coding-quiz/<a></p>
 </div>
 
 
