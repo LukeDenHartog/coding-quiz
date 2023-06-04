@@ -1,10 +1,18 @@
 # coding-quiz
 
-![Site screnshot](./assets/codingQuiz.jpg)
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=js,html,css" />
+  </a>
+</p>
+
+<div align="center">
+  <img src="./assets/codingQuiz.jpg" alt="Site screenshot">
+</div>
 
 Link to deployed application: https://afrozez.github.io/coding-quiz/
 
-[![My Skills](https://skillicons.dev/icons?i=js,html,css)](https://skillicons.dev)
+
 ## To successfully make a functional quiz I had to research how to make my page dynamic. I also had to look up how to store and retrieve data from the local storage. While creating this I got alot of practice writing code from scratch to make a functional quiz.
 
     If anyone would like to work on/add to this project it is recommended to first follow these steps:
