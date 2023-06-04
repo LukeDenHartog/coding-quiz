@@ -30,9 +30,7 @@ body {
 .flex {
     display: flex;
     margin: 0 auto;
-    border: 10px solid blue;
     justify-content: center;
-    background-color: white;
 }
 #submit-score {
     background-color: #820082;
@@ -56,8 +54,8 @@ li {
 
 .flex #question {
     font-size: 50px;
-    color: blue;
-    padding-left: 30px;
+    color: black;
+    padding: 0px 30px;
 }
 
 .buttons {
@@ -68,30 +66,25 @@ li {
 }
 
 #b1, #b2, #b3,  #b4 {
-    background-color:#2a0095;
+    background-color: teal;
     width: 250px;
     font-size: 20px;
     color: white;
     border: 1px solid #ccc;
     padding: 15px 15px;
     margin: 20px;
-
+    box-shadow: 7px 7px 7px grey;
 }
 
 #b1:hover, #b2:hover, #b3:hover,  #b4:hover {
-    curser: pointer;
-    background-color: pink;
+    cursor: pointer;
+    background-color: rgb(4, 193, 193);
 }
 
 #back-button {
     margin-bottom: 50px;
 }
 
-#correct-answer-display,
-#wrong-answer-display {
-    border-top: 3px solid grey;
-    
-}
 .dynamic-answering {
  display: flex;
  justify-content: center;
@@ -108,7 +101,18 @@ li {
     display: flex;
     justify-content: center;
     margin: 0px 15px 0px 15px;
-    font-size: 25px;
+    font-size: 50px;
+}
+.hide-display {
+    display: none;
+}
+#quiz {
+    border: 10px solid teal;
+    background-color: white;
+    box-shadow: 10px 10px 10px teal;
+}
+#b4 {
+    margin-bottom: 50px;
 }
 @media screen and (max-width: 480px) {
     .flex #question {
@@ -116,7 +120,7 @@ li {
         padding: 0 5px 0 15px; 
     }
     #quiz-flexbox {
-        border: 5px solid black;
+        border: 2px solid teal;
     }
     #start-button {
         width: 125px;
@@ -131,7 +135,10 @@ li {
     #view-hs {
         margin: 5px 0px 10px 0px;
     }
-}
-.hide-display {
-    display: none;
+    #quiz {
+        border: 5px solid teal;  
+    }
+    .header-flex-margin02 {
+        font-size: 35px;
+    }
 }
