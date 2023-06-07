@@ -64,7 +64,7 @@ startButton.addEventListener("click", function () {
             quizFlexbox.className = "hide";
             clearInterval(timer);
             countdown.textContent = 'The duration has ended!';
-            displayScore.textContent = `Your Final Score is: ${score}`;
+            displayScore.textContent = `Your Final Score is  ${score}`;
         }
     }, 1000);
 });
@@ -138,7 +138,7 @@ function handleAnswer(userAnswer) {
     if (userAnswer === currentQuestion.answer) {
 
         score++;
-        displayScore.textContent = `Your Final Score is: ${score}`;
+        displayScore.textContent = `Your Final Score is ${score}`;
         // Add the "show" class to the element
         correctAnswer.className = 'show';
 

@@ -20,6 +20,10 @@ body {
 #intro-h2 {
     padding: 0px 80px;
 }
+#intro-h2-02 {
+    padding: 0px 80px;
+    color: red;
+}
 .hide {
     display: none;
 }
@@ -149,7 +153,7 @@ li {
     font-size: 20px;
     padding-left: 15px;
     box-shadow: 5px 5px 10px;
-    margin-left: 10px;
+    margin: 0px 10px;
 }
 #enter-initials-text {
     font-size: 25px;
@@ -159,6 +163,22 @@ li {
 }
 .display-score {
     margin: 50px;
+    font-size: 35px;
+}
+#highscore-paragraph-ele li {
+    margin: 10px 0px;
+}
+#back-button {
+    width: 125px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 10px 10px 10px teal;
+}
+#clear-button {
+   
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 10px 10px 10px teal;
 }
 @media screen and (max-width: 480px) {
     .flex #question {
