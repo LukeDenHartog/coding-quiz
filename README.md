@@ -11,7 +11,7 @@
   <img src="./assets/codingQuiz.jpg" alt="Site screenshot">
 </div>
 <div align="center">
-  <p style="font-size: 25px">Link to deployed application: <a href="https://afrozez.github.io/coding-quiz/">https://afrozez.github.io/coding-quiz/<a></p>
+  <p style="font-size: 25px">Link to deployed application: <a href="https://lukedenhartog.github.io/coding-quiz/">https://lukedenhartog.github.io/coding-quiz/<a></p>
 </div>
 
 
@@ -21,13 +21,13 @@
     If anyone would like to work on/add to this project it is recommended to first follow these steps:
 
 - Download Visual Studio Code: https://code.visualstudio.com/
-- Pull the files frop my GitHub Profile Repository: https://github.com/Afrozez/passwordgenerator-03
+- Pull the files frop my GitHub Profile Repository: https://github.com/Lukedenhartog/passwordgenerator-03
 - It is recommended to have the latest version of Google Chrome which can be found here: https://www.google.com/chrome/.
   
 
 
 ## Usage
- This (https://afrozez.github.io/coding-quiz/) project displays a web based program that cycles through a array of coding questions. It will deduct 10 seconds for every incorrect answer and ask for the users initials at the end. Once the user enters their initials it will display the previous players scores. You can also view the highscore list by clicking the "View Highscores" text on the top left. This module will also be added to a github to display my experience to future visitors to my github page.
+ This (https://lukedenhartog.github.io/coding-quiz/) project displays a web based program that cycles through a array of coding questions. It will deduct 10 seconds for every incorrect answer and ask for the users initials at the end. Once the user enters their initials it will display the previous players scores. You can also view the highscore list by clicking the "View Highscores" text on the top left. This module will also be added to a github to display my experience to future visitors to my github page.
 
 If any users have any questions about how to start the project they can reach me at lukeadenhartog@gmail.com.
 
